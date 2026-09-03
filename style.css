@@ -228,7 +228,7 @@ header {
     display: none;
 }
 
-.tea-time-icon {
+.tee-time-icon {
     display: none;
 }
 
@@ -251,11 +251,11 @@ header {
         padding-inline: 16px;
     }
 
-    .tea-time-text {
+    .tee-time-text {
         display: none;
     }
 
-    .tea-time-icon {
+    .tee-time-icon {
         display: grid;
     }
 
