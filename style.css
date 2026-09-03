@@ -37,8 +37,8 @@ select {
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 a {
@@ -89,6 +89,7 @@ header {
 .nav-btn {
     padding: 8px 12px;
     border-radius: 40px;
+    flex-shrink: 0;
 }
 
 .nav-btn-text {
@@ -96,7 +97,7 @@ header {
     font-size: 12px;
     font-weight: 700;
     line-height: 20px;
-    letter-spacing: 1px;
+    letter-spacing: -0.05em;
 }
 
 .nav-btn:hover {
@@ -126,10 +127,13 @@ header {
     color: #FFFFFF;
 }
 
-.nav-search input::placeholder,
-.nav-search button svg {
+.nav-search input::placeholder {
     color: #93D99A;
     opacity: 0.7;
+}
+
+.nav-search button svg {
+    color: #93D99A;
 }
 
 .nav-search button {
@@ -185,19 +189,86 @@ header {
 .size-4 {
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
 }
 
 .size-6 {
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
 }
 
 .size-8 {
     width: 32px;
     height: 32px;
+    flex-shrink: 0;
 }
 
 .size-10 {
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #FFFFFF;
+    flex-shrink: 0;
+}
+
+/* Media Queries */
+/* Desktop */
+.menu-btn {
+    display: none;
+}
+
+.tea-time-icon {
+    display: none;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: grid;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .container {
+        padding-inline: 16px;
+    }
+
+    .tea-time-text {
+        display: none;
+    }
+
+    .tea-time-icon {
+        display: grid;
+    }
+
+    .nav-search {
+        border: 0;
+        padding: 0;
+    }
+
+    .nav-search input {
+        display: none;
+    }
+
+    .nav-search button {
+        padding: 4px;
+    }
 }

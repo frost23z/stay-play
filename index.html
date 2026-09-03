@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Details page of Eagle Greek Golf Club, Oriando, Florida">
+    <meta name="description" content="Details page of Eagle Creek Golf Club, Orlando, Florida">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <title>Eagle Greek Golf Club</title>
+    <title>Eagle Creek Golf Club</title>
 </head>
 
 <body>
@@ -24,8 +24,10 @@
             </svg>
             <span>Stay&amp;Play</span>
         </a>
+
         <div class="flex items-center gap-4">
-            <nav aria-label="Main navigation">
+
+            <nav class="desktop-nav" aria-label="Main navigation">
                 <ul class="flex items-center gap-4">
                     <li><a class="nav-btn nav-btn-text" href="#">HOME</a></li>
                     <li><a class="nav-btn nav-btn-text" href="#">WHERE TO STAY</a></li>
@@ -34,20 +36,37 @@
                 </ul>
             </nav>
 
-            <div class="flex items-center gap-4">
-                <a class="nav-btn nav-btn-text nav-btn-alt" href="#">BOOK A TEE TIME</a>
+            <a class="nav-btn nav-btn-text nav-btn-alt" href="#">
+                <span class="tea-time-text">BOOK A TEE TIME</span>
+                <span class="tea-time-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                    </svg>
+                </span>
+            </a>
 
-                <form class="nav-search nav-btn-text" role="search">
-                    <input type="search" name="q" placeholder="SEARCH" aria-label="Search">
-                    <button type="submit" aria-label="Submit search">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
-                    </button>
-                </form>
-            </div>
+            <form class="nav-search nav-btn-text" role="search">
+                <input type="search" name="q" placeholder="SEARCH" aria-label="Search">
+
+                <button type="submit" aria-label="Submit search">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </button>
+            </form>
+
+            <button class="icon-btn menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
         </div>
     </header>
 </body>
