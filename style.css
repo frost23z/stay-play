@@ -145,6 +145,31 @@ header {
     color: #FFFFFF;
 }
 
+/* Footer */
+
+footer {
+    min-height: 600px;
+    background-image:
+        linear-gradient(rgba(34, 47, 36, 0.9), rgba(34, 47, 36, 0.9)),
+        url("./assets/footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #B4C285;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    grid-auto-flow: column;
+}
+
 /* Utilities */
 .flex {
     display: flex;
