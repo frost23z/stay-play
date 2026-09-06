@@ -53,11 +53,11 @@ a {
     text-decoration: none;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
     padding: 0;
 }
-
 
 /* ==========================================================================
    Variables
@@ -240,6 +240,23 @@ select:hover {
 
 select:focus-visible {
     outline: 1px solid var(--color-accent-green);
+}
+
+/* ==========================================================================
+   Breadcrumb
+   ========================================================================== */
+.breadcrumb {
+    padding-top: var(--space-4);
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.breadcrumb a {
+    color: var(--color-text-muted);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
 }
 
 
