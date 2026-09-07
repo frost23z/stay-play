@@ -997,6 +997,124 @@ a.booking-card-cta.btn {
     margin-right: 4px;
 }
 
+/* ==========================================================================
+   Guest reviews
+   ========================================================================== */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+}
+
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review-card {
+    background: #fff;
+    border: 1px solid #e2e2da;
+    border-radius: var(--radius-sm);
+    padding: var(--space-4);
+}
+
+.review-date {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.review-meta .star-rating {
+    color: var(--color-gold);
+    font-size: 12px;
+}
+
+.review-text {
+    font-size: 13px;
+    color: #384533;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.review-avatar {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-surface-green);
+    color: var(--color-success);
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.review-name {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.review-role {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Course features
+   ========================================================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+}
+
+@media (max-width: 767px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-col {
+    background: var(--color-surface-green);
+    border: 1px solid var(--color-surface-green-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+}
+
+.feature-col-title {
+    font-size: 16px;
+    margin-bottom: var(--space-3);
+}
+
+.feature-subtitle {
+    font-size: 13px;
+    color: var(--color-dark-green);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-surface-green-border);
+}
+
+.feature-subtitle:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: 13px;
+    color: var(--color-text-muted);
+    padding-block: 4px;
+}
+
+.feature-list i {
+    color: var(--color-dark-green);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
 .icon-btn-outline {
     display: grid;
     place-items: center;
