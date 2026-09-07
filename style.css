@@ -823,16 +823,54 @@ a.booking-card-cta.btn {
     display: none;
 }
 
-.stay-map {
+.stay-map iframe {
     position: relative;
     min-height: 320px;
     height: 100%;
     border-radius: var(--radius-sm);
     overflow: hidden;
-    background:
-        radial-gradient(circle at 25% 30%, #cfe8d5 0%, transparent 45%),
-        radial-gradient(circle at 75% 65%, #bfe0e8 0%, transparent 40%),
-        #e7efe4;
+}
+
+.stay-pagination {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.pagination {
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+}
+
+.pagination-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+}
+
+.pagination-link:hover {
+    background: var(--color-surface-green);
+}
+
+.pagination-link-active {
+    background: var(--color-dark-green);
+    color: #fff;
+}
+
+.pagination-link-text {
+    width: auto;
+    padding: 0 6px;
+    color: var(--color-text-muted);
+}
+
+.pagination-link-text:hover {
+    color: #23291f;
+    background: transparent;
+    text-decoration: underline;
 }
 
 .icon-btn-outline {
