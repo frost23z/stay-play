@@ -87,6 +87,146 @@
                 <li aria-current="page">Eagle Creek Golf Club</li>
             </ol>
         </nav>
+
+        <!-- ============ Hero / Course Overview ============ -->
+        <section class="container hero" aria-labelledby="hero-title">
+            <div class="hero-heading">
+                <h1 id="hero-title" class="hero-title">Eagle Creek Golf Club, Stay and Play</h1>
+
+                <div class="hero-meta flex items-center gap-3">
+                    <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <span class="hero-score">9.0</span>
+                    <span class="hero-reviews">(3 REVIEWS)</span>
+                    <span class="hero-divider" aria-hidden="true">|</span>
+                    <span class="hero-hours"><i class="fa-regular fa-clock"></i> TEE TIMES DAILY 7 AM &ndash; 6
+                        PM</span>
+                </div>
+            </div>
+
+            <div class="hero-main">
+                <figure class="hero-gallery">
+                    <img class="hero-photo-main" src="assets/gallery-1.jpg"
+                        alt="Fairway alongside a lake with a wooden boardwalk at Eagle Creek Golf Club">
+                    <span class="hero-photo-side">
+                        <img src="assets/gallery-2.jpg" alt="View of a green surrounded by water on the course">
+                        <span class="hero-photo-frame">
+                            <img src="assets/gallery-3.jpg" alt="Clubhouse view across the lake at sunrise">
+                            <a class="hero-view-all" href="#">VIEW ALL 20 IMAGES</a>
+                        </span>
+                    </span>
+                    <a class="hero-view-all hero-view-all-mobile" href="#">VIEW ALL 20 IMAGES</a>
+                    <div class="hero-gallery-dots" aria-hidden="true">
+                        <span class="hero-gallery-dot hero-gallery-dot-active"></span>
+                        <span class="hero-gallery-dot"></span>
+                        <span class="hero-gallery-dot"></span>
+                        <span class="hero-gallery-dot"></span>
+                        <span class="hero-gallery-dot"></span>
+                        <span class="hero-gallery-dot"></span>
+                    </div>
+                </figure>
+
+                <!-- Compact Stay / Play promo shown on tablet & mobile in place of the full booking card -->
+                <div class="hero-promo">
+                    <div class="hero-promo-cards flex gap-3">
+                        <div class="hero-promo-card">
+                            <span class="hero-promo-icon"><i class="fa-solid fa-bed"></i></span>
+                            <p class="hero-promo-count">800+</p>
+                            <p class="hero-promo-label">PLACES TO STAY</p>
+                            <p class="hero-promo-price">FROM $300</p>
+                        </div>
+                        <div class="hero-promo-card">
+                            <span class="hero-promo-icon"><i class="fa-solid fa-golf-ball-tee"></i></span>
+                            <p class="hero-promo-count">100</p>
+                            <p class="hero-promo-label">TEE TIMES</p>
+                            <p class="hero-promo-price">FROM $100 &middot; $70 TWILIGHT</p>
+                        </div>
+                    </div>
+                    <div class="hero-promo-actions flex gap-2">
+                        <a class="btn btn-primary hero-promo-btn" href="#">BOOK A PLACE TO STAY</a>
+                        <a class="btn btn-accent hero-promo-btn" href="#">BOOK A TEE TIME</a>
+                    </div>
+                </div>
+
+                <p class="hero-description">
+                    Eagle Creek Golf Club combines scenic views with a championship-level course that offers a
+                    memorable golfing experience. Nestled amidst lush landscapes and serene water features, this
+                    course is known for its challenging design and exceptional playing conditions, making it a
+                    must-play destination for golf enthusiasts.
+                    <button type="button" class="link-btn hero-read-more">READ MORE <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                </p>
+
+                <div class="glance-bar flex items-center justify-between">
+                    <p class="glance-bar-title">EAGLE CREEK GOLF <br>CLUB AT A GLANCE</p>
+                    <ul class="glance-bar-stats flex items-center gap-6">
+                        <li><i class="fa-solid fa-golf-ball-tee"></i> PAR: 72</li>
+                        <li><i class="fa-solid fa-tape"></i> TOTAL YARDS: 7305</li>
+                        <li><i class="fa-solid fa-people-group"></i> PUBLIC COURSE</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#course-highlights">MORE COURSE HIGHLIGHTS</a>
+                </div>
+            </div>
+
+            <aside class="booking-card-wrap" aria-labelledby="booking-title">
+                <div class="booking-card">
+                    <p id="booking-title" class="booking-card-price">USD $600 <span>AVG PER NIGHT</span></p>
+
+                    <div class="booking-card-dates flex gap-2">
+                        <label class="booking-card-field">
+                            <span>CHECK-IN</span>
+                            <span class="booking-card-field-row">
+                                <input type="text" value="19 SEP 2025" readonly>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                        <label class="booking-card-field">
+                            <span>CHECK-OUT</span>
+                            <span class="booking-card-field-row">
+                                <input type="text" value="21 SEP 2025" readonly>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <label class="booking-card-field booking-card-field-full">
+                        <span>GUESTS</span>
+                        <span class="booking-card-field-row">
+                            <input type="text" value="3 Guests, 1 Infant, 1 Pet" readonly>
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </span>
+                    </label>
+
+                    <p class="booking-card-notice"><i class="fa-solid fa-circle-check"></i> Dates selected are
+                        available</p>
+
+                    <dl class="booking-card-price-rows">
+                        <div class="flex justify-between">
+                            <dt>PRICE PER NIGHT</dt>
+                            <dd>USD $600</dd>
+                        </div>
+                        <div class="flex justify-between booking-card-total">
+                            <dt>TOTAL PRICE</dt>
+                            <dd>USD $600</dd>
+                        </div>
+                    </dl>
+
+                    <a class="btn btn-primary booking-card-cta" href="#">CHECK AVAILABILITY</a>
+                    <p class="booking-card-redirect">You will be redirected to <strong>Booking.com</strong></p>
+
+                    <p class="booking-card-hot-deal"><i class="fa-solid fa-fire"></i> Hot Deal &ndash; it has been
+                        viewed 30 times today</p>
+                </div>
+
+                <p class="booking-card-alt">Not the right fit? Check out our other Top Rated Beach Rentals in <a
+                        href="#">Orlando</a></p>
+            </aside>
+        </section>
     </main>
 
     <footer class="flex items-center justify-center">

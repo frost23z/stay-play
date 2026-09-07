@@ -74,11 +74,13 @@ ol {
     --color-accent-green: #93D99A;
     --color-accent-green-border: #85C58C;
     --color-muted-green: #B4C285;
-    --color-surface-green: #F1F8F1;
+    --color-surface-green: #F4FCF6;
+    --color-surface-green-border: #E4F0E6;
     --color-text-muted: #6B6F66;
     --color-blue: #6FC6E0;
     --color-gold: #F0A93A;
     --color-success: #2E7D46;
+    --color-info-bg: #ECF3F9;
 
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -110,6 +112,10 @@ ol {
 .container {
     width: 100%;
     padding-inline: var(--container-padding);
+}
+
+main section {
+    padding-block: var(--space-8);
 }
 
 /* ==========================================================================
@@ -256,6 +262,355 @@ select:focus-visible {
 }
 
 .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4) var(--space-8);
+    padding-top: var(--space-4);
+    align-items: start;
+}
+
+.hero-heading {
+    grid-column: 1 / -1;
+}
+
+/* Desktop: booking card sits as a true sidebar, aligned to the gallery's top edge */
+@media (min-width: 1025px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) 360px;
+        row-gap: 0;
+    }
+
+    .hero-heading {
+        margin-bottom: var(--space-4);
+    }
+}
+
+.hero-title {
+    font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2rem);
+    margin-bottom: var(--space-2);
+}
+
+.hero-meta {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-4);
+}
+
+.star-rating {
+    color: var(--color-success);
+}
+
+.hero-score {
+    font-weight: 700;
+    color: #23291f;
+}
+
+.hero-divider {
+    color: #d5d5cd;
+}
+
+.hero-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-1);
+    margin-bottom: var(--space-4);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.hero-photo-main {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.hero-photo-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--space-1);
+}
+
+.hero-photo-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: var(--radius-sm); */
+}
+
+.hero-photo-frame {
+    position: relative;
+}
+
+.hero-photo-frame img {
+    height: 100%;
+}
+
+.hero-view-all {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.hero-view-all-mobile {
+    display: none;
+}
+
+.hero-gallery-dots {
+    display: none;
+}
+
+.hero-description {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+}
+
+.hero-description .link-btn {
+    color: #23291f;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.glance-bar {
+    color: var(--color-dark-green);
+    background: var(--color-surface-green);
+    border: 1px solid var(--color-surface-green-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-4) var(--space-6);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.glance-bar-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.glance-bar-stats {
+    font-size: 13px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    color: #384533;
+}
+
+.glance-bar-stats li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Hero promo (tablet & mobile only, replaces glance-bar + booking-card) */
+.hero-promo {
+    display: none;
+}
+
+.hero-promo-cards {
+    margin-bottom: var(--space-3);
+}
+
+.hero-promo-card {
+    flex: 1;
+    background: var(--color-surface-green);
+    border: 1px solid var(--color-surface-green-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+    color: var(--color-dark-green);
+}
+
+.hero-promo-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+    color: var(--color-success);
+}
+
+.hero-promo-count {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-promo-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
+}
+
+.hero-promo-price {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: var(--space-2);
+}
+
+.hero-promo-actions {
+    flex-wrap: wrap;
+}
+
+.hero-promo-btn {
+    flex: 1;
+    min-width: 160px;
+    padding-block: 12px;
+    font-size: 11px;
+}
+
+/* Booking card (aside) */
+.booking-card-wrap {
+    align-self: start;
+}
+
+.booking-card {
+    background: #fff;
+    border: 1px solid #e2e2da;
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    overflow: hidden;
+}
+
+.booking-card-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.booking-card-price span {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    margin-left: var(--space-2);
+}
+
+.booking-card-dates {
+    margin-bottom: var(--space-2);
+}
+
+.booking-card-field {
+    display: block;
+    flex: 1;
+    border: 1.5px solid #23291f;
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+    font-size: 11px;
+}
+
+.booking-card-field span {
+    display: block;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.booking-card-field-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+}
+
+.booking-card-field-row i {
+    color: var(--color-text-muted);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.booking-card-field input {
+    border: none;
+    width: 100%;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.booking-card-field-full {
+    margin-bottom: var(--space-4);
+}
+
+.booking-card-notice {
+    background: var(--color-info-bg);
+    border-radius: var(--radius-sm);
+    padding: 10px var(--space-3);
+    margin: 0 0 var(--space-4);
+    font-size: 12px;
+}
+
+.booking-card-notice i {
+    color: var(--color-success);
+}
+
+.booking-card-price-rows {
+    font-size: 12px;
+    margin-bottom: var(--space-4);
+    color: var(--color-text-muted);
+}
+
+.booking-card-price-rows div {
+    padding-block: 6px;
+}
+
+.booking-card-total {
+    font-weight: 700;
+    color: #23291f;
+    border-top: 1px solid #eee;
+    padding-top: 10px !important;
+    font-size: 14px;
+}
+
+a.booking-card-cta.btn {
+    margin-bottom: var(--space-2);
+    font-size: 13px;
+    border-radius: var(--radius-sm);
+}
+
+.booking-card-redirect {
+    text-align: center;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+}
+
+.booking-card-hot-deal {
+    background: var(--color-info-bg);
+    padding: 12px var(--space-3);
+    margin: 0;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+}
+
+.booking-card-hot-deal i {
+    color: #e08a2b;
+}
+
+.booking-card-alt {
+    background: var(--color-info-bg);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-top: var(--space-3);
+    padding: var(--space-4);
+}
+
+.booking-card-alt a {
+    color: var(--color-success);
+    font-weight: 700;
     text-decoration: underline;
 }
 
@@ -461,6 +816,65 @@ footer {
     flex-shrink: 0;
 }
 
+/* Reusable buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 12px 22px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    border: 2px solid transparent;
+}
+
+.btn-outline {
+    border-color: #23291f;
+    color: #23291f;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #23291f;
+    color: #fff;
+}
+
+.btn-accent {
+    background: var(--color-accent-green);
+    color: #10240f;
+}
+
+.btn-accent:hover {
+    filter: brightness(0.95);
+}
+
+.btn-primary {
+    background: var(--color-blue);
+    color: #052a33;
+    width: 100%;
+    padding-block: 14px;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    flex: 1;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    color: inherit;
+}
+
+
+
 .icon-btn {
     display: grid;
     place-items: center;
@@ -476,7 +890,6 @@ footer {
 .icon-btn:hover {
     color: var(--color-accent-green);
 }
-
 
 /* ==========================================================================
    Media Queries
@@ -508,6 +921,62 @@ footer {
 
     .footer-side {
         align-items: flex-start;
+    }
+
+    /* Hero: swap the full booking card for the compact Stay/Play promo. The
+       "at a glance" bar stays visible on tablet/mobile per design. */
+    .booking-card-wrap {
+        display: none;
+    }
+
+    .hero-promo {
+        display: block;
+    }
+
+    /* Gallery collapses to a single photo with dot carousel on tablet too */
+    .hero-gallery {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo-side {
+        display: none;
+    }
+
+    .hero-view-all-mobile {
+        display: inline-flex;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .hero-gallery-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        right: 0;
+    }
+
+    .hero-gallery-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-gallery-dot-active {
+        width: 18px;
+        border-radius: 4px;
+        background: #fff;
+    }
+
+    /* Map appears above the stay cards on tablet/mobile */
+    .stay-map {
+        order: -1;
     }
 }
 
@@ -568,6 +1037,146 @@ footer {
     .footer-selects {
         max-width: none;
     }
+
+    /* Hero gallery collapses to a single photo with the "view all" badge on top */
+    .hero-gallery {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo-side {
+        display: none;
+    }
+
+    .hero-view-all-mobile {
+        display: inline-flex;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .hero-promo-cards {
+        flex-direction: column;
+    }
+
+    .hero-promo-actions {
+        flex-direction: column;
+    }
+
+    .hero-promo-btn {
+        min-width: 0;
+    }
+
+    .stay-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Stay cards become a swipeable single-card carousel on mobile */
+    .stay-map {
+        display: none;
+    }
+
+    .stay-grid {
+        display: flex;
+        grid-template-columns: none;
+        gap: var(--space-4);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 4px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .stay-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .stay-card {
+        flex: 0 0 88%;
+        scroll-snap-align: start;
+    }
+
+    .stay-grid-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: var(--space-3);
+    }
+
+    .stay-grid-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #d5d8d2;
+    }
+
+    .stay-grid-dot-active {
+        width: 18px;
+        border-radius: 4px;
+        background: var(--color-success);
+    }
+
+    /* Weather pattern cards become a swipeable carousel on mobile */
+    .weather-current-today {
+        padding: var(--space-4);
+    }
+
+    .weather-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: var(--space-4);
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .weather-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .weather-card {
+        flex: 0 0 88%;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+
+    .weather-icon {
+        margin-inline: auto;
+    }
+
+    .weather-grid-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: var(--space-4);
+    }
+
+    .weather-grid-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #d5d8d2;
+    }
+
+    .weather-grid-dot-active {
+        width: 18px;
+        border-radius: 4px;
+        background: var(--color-success);
+    }
 }
 
 
@@ -582,8 +1191,8 @@ footer {
         gap: var(--space-2);
     }
 
-    .logo span {
-        display: none;
+    .logo {
+        font-size: 18px;
     }
 
     .footer-links {
